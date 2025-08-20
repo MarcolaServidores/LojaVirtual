@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wgth@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;&display=swap');
+
+
+.topo {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    padding-left: 90px;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(146, 0, 10) 59%);
+  }
+
+  .barra-pesquisa:focus {
+    border-color: rgb(255, 160, 160); 
+  }
+  input::placeholder{
+    color: white;
+  }
+  .paginaposbanner{
+    background-color: rgb(6, 6, 6);
+    width: 100%;
+    height: 100px;
+    
+  }
+
+.barradepesquisa {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#lupinha {
+  display: none;
+}
+
+.barra {
+  position: absolute;
+  right: 35px; 
+  width: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  outline: none;
+  transition: width 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+  background-color: transparent;
+  color: white;
+  opacity: 0;
+}
+
+.barra::placeholder {
+  color: rgba(255, 255, 255, 0.534);
+}
+
+#lupinha:checked + .barra {
+  width: 300px;
+  padding: 10px 15px;
+  opacity: 1;
+}
+
+.barra:focus {
+  border-color: rgb(255, 0, 55); 
+}
+
+.botaozin {
+  cursor: pointer;
+  z-index: 2;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(6, 6, 6);
+    height: 100vh;
+}
+
+
+
+.formcontato{
+    background-color: rgba(31, 31, 31, 0.534);
+    padding: 32px;
+    border-radius: 10px;
+    min-width: 20%;
+    width: 30%;
+    overflow: auto;
+    border: 1.5px solid red;
+    height: 70%;
+}
+
+h1{
+  margin-bottom: 15px;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.formcontato form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputs{
+  padding: 10px 6px;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(6, 6, 6);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-right: 2px solid rgb(221, 0, 0);
+  border-bottom: 2px solid rgb(221, 0, 0);
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.4s;
+}
+
+.inputs:focus{
+  border-color: rgb(255, 255, 255);
+}
+
+.inputs::placeholder{
+  color: rgb(90, 90, 90);
+}
+
+.formulariocentralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.formcontato p{
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+button{
+  padding: 12px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  margin-block: 5px;
+  background-color: rgb(190, 0, 0);
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+button:hover{
+  background-color: red;
+}
+
+footer{
+  width: 100%;
+  color: whitesmoke;
+  margin-top: 60px;
+}
+
+.footerhref{
+  text-decoration: none;
+}
+
+#footerprincipal{
+  background-color: #272727;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 60px;
+}
+
+
+#footercontatos h1{
+  margin-bottom: 2px;
+}
+
+#footercontatos p{
+  margin-bottom: 10px;
+  color:  rgb(160, 0, 0);
+}
+
+#footercontatos p:hover{
+   color: rgb(243, 101, 101);
+}
+
+#footermedias{
+  display: flex;
+  gap: 25px;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+#footermedias .footerhref{
+  height: 10px;
+  width: 10px;
+  color: whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+
+#footermedias .footerhref:hover{
+  opacity: 0.8;
+  
+}
+
+.footertexto{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+
+.footertexto .footerhref{
+    color: rgb(243, 101, 101);
+    transition: 0.5s;
+}
+
+.footertexto .footerhref:hover{
+     color:  rgb(121, 0, 0);
+}
+
+#footercontatin{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#inputemail a{
+    background-color: transparent !important;
+    padding: 1px 3px;
+    margin-right: -20px;
+}
+
+#inputemail input{
+    background-color: transparent;
+    border: 1px solid rgb(243, 101, 101);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 7px 20px;
+    transform: translateY(-20%);
+    color: whitesmoke;
+  
+}
+#inputemail input:hover{
+    border: 1px solid rgb(121, 0, 0);
+}
+
+#footercontatin p{
+    margin-bottom: 2px;
+}
+
+#footermarquinha{
+    background-color: #272727;
+    text-align: center;
+    font-size: 12px;
+}
+
+ 
+        @media (max-width: 1100px) and (min-width: 551px) {
+            .topo {
+                padding: 10px 30px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .logo {
+                padding-right: 0 !important;
+                width: 150px;
+                height: 100px;
+            }
+            
+            .barradepesquisa {
+                order: 3;
+                width: 100%;
+                margin-top: 10px;
+                justify-content: center;
+            }
+            
+            #lupinha:checked + .barra {
+                width: 90%;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+            }
+            
+            .formcontato {
+                width: 60%;
+                min-width: 300px;
+                padding: 25px;
+            }
+            
+            .formulariocentralizado {
+                padding: 30px 0;
+            }
+            
+            #footerprincipal {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            #footermedias .footerhref {
+                height: 35px;
+                width: 35px;
+            }
+            
+            #inputemail {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            #inputemail a {
+                margin-left: 0;
+                align-self: center;
+            }
+        }
+
+       
+        @media (max-width: 550px) {
+            .topo {
+                padding: 10px 15px;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .logo {
+                width: 130px;
+                height: 90px;
+                margin-bottom: 10px;
+                padding-right: 0 !important;
+            }
+            
+            .barradepesquisa {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            #lupinha:checked + .barra {
+                width: 90%;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+            }
+            
+            .topo-icons {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .formcontato {
+                width: 80%;
+                min-width: unset;
+                padding: 20px;
+                height: 550px;
+            }
+            
+            .formulariocentralizado {
+                padding: 20px 0;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .inputs {
+                padding: 12px 8px;
+                font-size: 14px;
+            }
+            
+            textarea.inputs {
+                min-height: 120px;
+            }
+            
+            button {
+                padding: 14px;
+                font-size: 15px;
+            }
+            
+
+            #footerprincipal {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+                gap: 30px;
+            }
+            
+            .titulo {
+                font-size: 22px;
+            }
+            
+            #inputemail {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            #inputemail a {
+                margin-left: 0;
+                align-self: center;
+            }
+        }

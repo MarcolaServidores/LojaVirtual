@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wgth@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;&display=swap');
+
+
+
+.topo {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    padding-left: 90px;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(146, 0, 10) 59%);
+  }
+  
+
+
+  .barra-pesquisa:focus {
+    border-color: rgb(255, 160, 160); 
+  }
+  input::placeholder{
+    color: white;
+  }
+  
+
+.barradepesquisa {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#lupinha {
+  display: none;
+}
+
+.barra {
+  position: absolute;
+  right: 35px; 
+  width: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  outline: none;
+  transition: width 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+  background-color: transparent;
+  color: white;
+  opacity: 0;
+}
+
+.barra::placeholder {
+  color: rgba(255, 255, 255, 0.534);
+}
+
+#lupinha:checked + .barra {
+  width: 300px;
+  padding: 10px 15px;
+  opacity: 1;
+}
+
+.barra:focus {
+  border-color: rgb(255, 0, 55); 
+}
+
+.botaozin {
+  cursor: pointer;
+  z-index: 2;
+}
+
+.paginaposbanner{
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 55px;
+    display: flex;
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px;
+    justify-content: center;
+  }
+
+.zapzap{
+    margin-left: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.zapzap a {
+  position: relative;
+  display: inline-block;
+  width: 25px;  
+  height: 30px; 
+}
+
+.zapzap a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.zapzap a img.vermelho {
+  opacity: 0;      
+  z-index: 2;      
+}
+
+.zapzap a img.branco {
+  opacity: 1;
+  z-index: 1;
+}
+
+.zapzap a:hover img.vermelho {
+  opacity: 1;     
+}
+
+.zapzap a:hover img.branco {
+  opacity: 0;       
+}
+
+.paginaprodutos{
+  width: 100%;
+  height: 650px;
+  background-color: rgb(20, 20, 20);
+}
+
+
+.gradeprodutos {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.produto {
+  background-color: #272727; 
+  border-radius: 30px;
+  padding: 20px;
+  width: 30%; 
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s ease; 
+}
+
+.produto img {
+  width: 100%;
+}
+
+.produto button {
+  border-radius: 30px;
+  padding: 10px 90px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  margin-top: 10px;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto:hover button {
+  opacity: 1; 
+  background-color: rgb(145, 14, 14);
+}
+
+.secoes {
+  background-color: black;
+  display: flex;
+  gap: 45px;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.secoes a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.secoes :hover{
+  color: red;
+}
+
+footer{
+  width: 100%;
+  color: whitesmoke;
+}
+
+.footerhref{
+  text-decoration: none;
+}
+
+#footerprincipal{
+  background-color: #272727;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 60px;
+}
+
+
+#footercontatos h1{
+  margin-bottom: 2px;
+}
+
+#footercontatos p{
+  margin-bottom: 10px;
+  color:  rgb(160, 0, 0);
+}
+
+#footercontatos p:hover{
+   color: rgb(243, 101, 101);
+}
+
+#footermedias{
+  display: flex;
+  gap: 25px;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+
+#footermedias .footerhref{
+  height: 10px;
+  width: 10px;
+  color: whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+
+#footermedias .footerhref:hover{
+  opacity: 0.8;
+  
+}
+
+.footertexto{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+
+.footertexto .footerhref{
+    color: rgb(243, 101, 101);
+    transition: 0.5s;
+}
+
+.footertexto .footerhref:hover{
+     color:  rgb(121, 0, 0);
+}
+
+#footercontatin{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#inputemail a{
+    background-color: transparent !important;
+    padding: 1px 3px;
+    margin-right: -20px;
+}
+
+#inputemail input{
+    background-color: transparent;
+    border: 1px solid rgb(243, 101, 101);
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 7px 20px;
+    transform: translateY(-20%);
+    color: whitesmoke;
+  
+}
+#inputemail input:hover{
+    border: 1px solid rgb(121, 0, 0);
+}
+
+#footercontatin p{
+    margin-bottom: 2px;
+}
+
+#footermarquinha{
+    background-color: #272727;
+    text-align: center;
+    font-size: 12px;
+}
+
+.sobre{
+  background-color: rgb(20, 20, 20);
+  padding-bottom: 50px;
+}
+
+.sobre h1{
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fotosobre{
+  display: flex;
+  gap: 70px;
+  margin-left: 6%;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.fotosobre img{
+  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid red;
+  border-right: 2px solid red;
+}
+
+.textosobre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tracinho{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 90px;
+}
+
+
+.gradedeprodutos{
+  background-color: rgb(20, 20, 20);
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 150px;
+}
+
+.gradedeprodutos button {
+    margin-top: 50px;
+    padding: 12px 72px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid red;
+    border-right: 2px solid red;
+    background: rgba(31, 31, 31, 0.6);     
+    color: #ffffff;
+    cursor: pointer;            
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-weight: bold;
+    transition: 0.5s
+}
+
+.gradedeprodutos button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+        @media (max-width: 1100px) {
+            .topo {
+                padding: 10px 30px;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .logo {
+                padding-right: 0 !important;
+                width: 150px;
+                height: 100px;
+            }
+            
+            .barradepesquisa {
+                order: 3;
+                width: 100%;
+                max-width: 100%;
+                margin: 10px 0 0 0;
+                justify-content: center;
+            }
+            
+            #lupinha:checked + .barra {
+                width: 90%;
+            }
+            
+            .secoes {
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+            
+            #footerprincipal {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+            
+            .fotosobre {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .fotosobre img {
+                max-width: 100%;
+                height: auto;
+            }
+            
+            .textosobre {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+            
+            .gradeprodutos {
+                justify-content: center;
+            }
+            
+            .produto {
+                width: 45%;
+                max-width: none;
+            }
+        }
+
+       
+        @media (max-width: 550px) {
+            .topo {
+                padding: 10px 15px;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .logo {
+                width: 130px;
+                height: 90px;
+                margin-bottom: 10px;
+            }
+            
+            .barradepesquisa {
+                order: 0;
+                margin: 10px 0;
+            }
+            
+            .topo-icons {
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .secoes {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            
+            .secoes img {
+                display: none;
+            }
+            
+            .paginaposbanner {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 10px;
+            }
+            
+            .zapzap {
+                margin-left: 0;
+                justify-content: center;
+            }
+            
+            .gradeprodutos {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .produto {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .produto button {
+                opacity: 1;
+                padding: 10px 20px;
+            }
+            
+            #footerprincipal {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+                gap: 30px;
+            }
+            
+            .fotosobre {
+                margin-left: 0;
+            }
+            
+            .fotosobre img {
+                width: 100%;
+                height: auto;
+            }
+            
+            .textosobre {
+                padding: 0 10px;
+            }
+            
+            .gradedeprodutos button {
+                padding: 12px 30px;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+        }

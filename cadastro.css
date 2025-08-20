@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wgth@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(telalogin.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.telalogin{
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(10px);
+}
+
+.telalogin h1 {
+    font-size: 36px;
+    text-align: center;
+
+}
+
+.inputlogin{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.inputlogin input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    font-size: 16px;
+    color: whitesmoke;
+    padding: 20px 45px 20px 20px;
+    border-radius: 40px;
+}
+
+.inputlogin input::placeholder{
+    color: #c5c5c5;
+}
+
+.inputlogin img{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lembrarsenha{
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+.lembrarsenha label input{
+        accent-color: whitesmoke;
+        margin-right: 5px;
+}
+
+.lembrarsenha a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.lembrarsenha a:hover{
+    text-decoration: underline;
+}
+
+.login{
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+
+.login:hover{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: whitesmoke;
+    transition: 0.5s;
+}
+
+.linkderegistro{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.linkderegistro a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.linkderegistro a:hover{
+    text-decoration: underline;
+}
+
+/* Responsivo acima de 1100px (desktop grande) */
+@media (min-width: 1101px) {
+  /* Geralmente não precisa alterar nada, mas pode ajustar espaçamentos se quiser */
+}
+
+/* Responsivo entre 550px e 1100px (tablet e notebook) */
+@media (max-width: 1100px) and (min-width: 551px) {
+  .topo {
+    padding-left: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .telalogin, .formcontato {
+    width: 60%;
+    min-width: 300px;
+    padding: 20px;
+  }
+  .galeria {
+    width: 90%;
+    margin: auto;
+  }
+  .gradeprodutos, .fotosobre {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .produto {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsivo abaixo de 550px (celular) */
+@media (max-width: 550px) {
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5px;
+    gap: 5px;
+  }
+  .telalogin, .formcontato {
+    width: 98%;
+    min-width: unset;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .inputlogin input, .inputs {
+    font-size: 14px;
+    padding: 12px 35px 12px 12px;
+  }
+  .galeria {
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+  }
+  .imagemgrande img, .imagempequena img {
+    width: 100%;
+    height: auto;
+  }
+  .imagensdebaixo {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .gradeprodutos, .fotosobre {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .produto {
+    width: 98%;
+    margin-bottom: 15px;
+  }
+  .gradedeprodutos button, .login {
+    padding: 10px 0;
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .linkderegistro, .lembrarsenha {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 13px;
+  }
+  footer, #footerprincipal, #footermarquinha {
+    font-size: 11px;
+    padding: 10px 2px;
+    text-align: center;
+  }
+}
