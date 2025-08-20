@@ -8,6 +8,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="carrinho">
+    <input type="checkbox" id="toggle-carrinho" class="toggle-carrinho">
+
+
+    <label for="toggle-carrinho" class="abrir-carrinho">
+        <img src="carrinho.png" alt="Carrinho" width="30px" style="cursor: pointer;">
+    </label>
+
+
+    <div class="carrinho-lateral">
+        <div class="faixac">
+            <h2>Seu Carrinho</h2>
+            <label for="toggle-carrinho" class="fechar-carrinho">&times;</label>
+        </div>
+        <div class="carrinho-conteudo">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Parafusadeira Emerson</td>
+                        <td>1</td>
+                        <td>R$299,90</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">
+                <p><strong>Total:</strong> R$299,90</p>
+            </div>
+            <button class="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </div>
+</div>
+
+
+
+
     <div class="topo">
             <a href="index.html"><img src="logo.png" style="width: 180px; height: 120px; padding-right: 900px;"></a>
         <div class="barradepesquisa">
